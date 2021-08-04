@@ -45,18 +45,27 @@
   />
   <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
  </head>
- <body>
-  <a name="home"></a>
-  <div class="wrapper" id="root">
+
+ <!-- body -->
+ <body data-barba="wrapper">
+  <div class="load-container">
+   <div class="loading-screen"></div>
+  </div>
+  <div
+   class="wrapper"
+   id="root"
+   data-barba="container"
+   data-barba-namespace="p-experience-section"
+  >
    <!--------------- hero section starts here --------------->
 
    <div class="video-container">
     <video playsinline autoplay muted loop id="bgvid">
-     <source src="MEMORY 1025.mp4" type="video/mp4" />
+     <source src="https://files.catbox.moe/f6bpxj.mp4" type="video/mp4" />
     </video>
    </div>
 
-   <div class="header">
+   <div class="header animate-this">
     <h1>dexter ho.</h1>
    </div>
 
@@ -75,7 +84,6 @@
      <li><a href="pages/course.html">My Course</a></li>
      <li><a href="pages/feedback.html">Feedback</a></li>
      <li><a href="pages/pastExperience.html">Past Experience</a></li>
-     <li><a href="#contact">Contact</a></li>
     </ul>
 
     <div id="toggle">
@@ -92,7 +100,6 @@
      <li><a href="pages/course.html">My Course</a></li>
      <li><a href="pages/feedback.html">Feedback</a></li>
      <li><a href="pages/pastExperience.html">Past Experience</a></li>
-     <li><a href="#contact">Contact</a></li>
     </ul>
    </div>
 
@@ -210,6 +217,35 @@
         </div>
        </div>
       </div>
+
+      <div id="carouselInterest" class="carousel slide" data-bs-ride="carousel">
+       <div class="carousel-inner">
+        <div class="carousel-item active">
+         <img src="./pic/basketball.jpg" class="carousel-image" alt="..." />
+        </div>
+        <div class="carousel-item">
+         <img src="./pic/rubiks.jpg" class="carousel-image" alt="..." />
+        </div>
+       </div>
+       <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselInterest"
+        data-bs-slide="prev"
+       >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+       </button>
+       <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselInterest"
+        data-bs-slide="next"
+       >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+       </button>
+      </div>
      </div>
     </section>
 
@@ -263,123 +299,6 @@
 
     <!--------------- team section ends here --------------->
 
-    <!--------------- newsletter section starts here --------------->
-
-    <section class="newsletter">
-     <div class="container">
-      <div class="row">
-       <div class="col-md-12">
-        <div class="news-data">
-         <div class="section-subheading">
-          <h1 class="wow fadeInUp" data-wow-delay="0.3s">
-           Subscribe to my newsletter
-          </h1>
-         </div>
-
-         <div class="input-group wow fadeInUp" data-wow-delay="0.4s">
-          <input
-           type="email"
-           class="form-control"
-           placeholder="Enter your email"
-          />
-          <span class="input-group-btn">
-           <button class="btn" type="submit">Subscribe</button>
-          </span>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </section>
-
-    <!--------------- newsletter section ends here --------------->
-
-    <!--------------- contact section starts here --------------->
-
-    <a name="contact"></a>
-
-    <section class="contact">
-     <div class="container-fluid">
-      <div class="row">
-       <div class="col-md-2"></div>
-       <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s">
-        04
-       </div>
-       <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s">
-        Contact Me
-       </div>
-      </div>
-
-      <div class="row">
-       <div class="col-md-4"></div>
-       <div class="col-md-6 icon-title wow fadeInUp" data-wow-delay="0.5s">
-        Let's get in touch.
-       </div>
-      </div>
-
-      <div class="row">
-       <div class="col-md-4"></div>
-       <div class="col-md-6">
-        <form action="" name="contact-form" id="contact-form" method="POST">
-         <ul>
-          <li class="wow fadeInUp" data-wow-delay="0.6s">
-           <label for="contact-name">Name :</label>
-           <div class="textarea">
-            <input
-             type="text"
-             name="contact-name"
-             id="contact-name"
-             value=""
-             required
-            />
-           </div>
-          </li>
-
-          <br />
-
-          <li class="wow fadeInUp" data-wow-delay="0.7s">
-           <label for="contact-email">E-mail :</label>
-           <div class="textarea">
-            <input
-             type="email"
-             name="contact-email"
-             id="contact-email"
-             value=""
-             required
-            />
-           </div>
-          </li>
-
-          <br />
-
-          <li class="wow fadeInUp" data-wow-delay="0.8s">
-           <label for="contact-project">Message :</label>
-           <div class="textarea">
-            <textarea
-             name="contact-project"
-             id="contact-project"
-             rows="6"
-             required
-            ></textarea>
-           </div>
-          </li>
-         </ul>
-
-         <button
-          type="submit"
-          name="contact-submit"
-          id="contact-submit"
-          class="send wow fadeInUp"
-          data-wow-delay="0.9s"
-         >
-          Send Message
-         </button>
-        </form>
-       </div>
-      </div>
-     </div>
-    </section>
-
     <!--------------- footer starts here --------------->
 
     <div class="footer">
@@ -415,7 +334,10 @@
    </div>
   </div>
 
+  <!-- js dependencies (jquery, barba.js for page transitions) -->
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
   <script src="scripts/index.js"></script>
  </body>
 </html>

@@ -1,13 +1,30 @@
-html,
-body {
- cursor: url(cursor.png), auto !important;
-}
-
 * {
  box-sizing: border-box;
  margin: 0%;
  padding: 0%;
  font-family: "Darker Grotesque" !important;
+}
+
+/* page transition loading */
+.loading-screen {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: #d3ae87;
+    width: 0%;
+    height: 100%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 99;
+    pointer-events: none;
 }
 
 /*--------------- hero section --------------- */
@@ -51,6 +68,7 @@ video {
  color: #d3ae87;
  font-size: 80px !important;
  font-weight: 800;
+ text-shadow: 3px 3px #000
 }
 
 /* mobile friendly */
@@ -327,6 +345,17 @@ font-size: 28px;
 margin-bottom: 4px;
 color: rgb(0, 0, 0);
 font-weight: lighter;
+}
+
+.carousel button:hover {
+    background: none;
+}
+
+.carousel-image {
+    height: 70vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*--------------- newsletter section starts  --------------- */
