@@ -165,6 +165,7 @@ video {
  transition: all 0.3s ease-out;
  visibility: hidden;
  opacity: 0;
+ cursor: pointer;
 }
 
 .close-btn {
@@ -177,6 +178,7 @@ video {
  z-index: 2;
  top: -2px;
  line-height: 80px;
+ cursor: pointer;
 }
 
 #resize {
