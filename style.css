@@ -193,7 +193,7 @@ video {
  transition: all 1s ease-out;
 }
 
-#resize #menu {
+#resize .menu {
  height: 90px;
  position: absolute;
  left: 45%;
@@ -203,7 +203,7 @@ video {
  vertical-align: center;
 }
 
-#resize #menu li {
+#resize .menu li {
  display: block;
  text-align: center;
  padding: 10px 0;
@@ -218,11 +218,11 @@ video {
  margin-top: 140px;
 }
 
-#resize #menu li a {
+#resize .menu li a {
  color: #fff;
 }
 
-#resize #menu li a:hover {
+#resize .menu li a:hover {
  text-decoration: none;
 }
 
@@ -445,7 +445,7 @@ font-weight: lighter;
  resize: vertical;
  background: transparent;
  color: #101010;
- font-weight: bolder;
+ font-weight: bold;
 }
 
 input:focus {
